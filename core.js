@@ -11,6 +11,12 @@ STORE.commitments = [
   new TimeCommitment(10, STORE.tasks[1]),
 ];
 
+const getTaskByID = id => STORE.tasks[id - 1];
+
+const startTimer = id => {
+  let task = getTaskById(id);
+  
+}
 
 const TASK_SIZES = [
   'minutes',
@@ -24,10 +30,11 @@ function Effort(startTime, endTime) {
 }
 
 function isSameDay(ts1, ts2) {
-  // get start timestamp of calender day for ts1
-  // get end of day
-  // is ts2 > start && < end
-  return true;
+  d1 = new Date(ts1);
+  d2 = new Date(ts2);
+  res = '' + d1.getMonth() + d1.getDate() == '' + d2.getMonth() + d2.getDate();
+  console.log(`${d1} vs ${d2} returns ${res}`);
+  return res;
 }
 
 // YYYY-MM-DD

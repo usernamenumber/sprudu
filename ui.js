@@ -14,6 +14,6 @@ function HTMLforCommitment(comm) {
   return `<tr>
     <td>${minutes}</td>
     <td>${name}</td>
-    <td><button class="play-pause">Start</button></td>
+    <td><button class="play-pause" onClick="startTimer(${comm.id})">Start</button></td>
   </tr>`;
 }
